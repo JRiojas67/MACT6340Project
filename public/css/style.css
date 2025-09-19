@@ -9,10 +9,27 @@ html {
 }
 
 body {
+  background-color: rgb(238, 238, 242);
   font-family: "Roboto", sans-serif;
   
 }
 
-div {
+/* div {
   border: 1px solid white;
+} */
+
+.area {
+  min-height: 750px;
 }
+.spacer{
+   min-height: 75px;
+} 
+
+ #splash { 
+min-height:800px;
+background: url("/iamges/AbitofColor67.jpg") no-repeat center center fixed;
+background-repeat: no-repeat;
+background-position:center;
+background-size: cover;
+background-attachment: fixed;
+ };
