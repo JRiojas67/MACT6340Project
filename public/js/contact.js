@@ -1,0 +1,22 @@
+import { value } from "p5";
+
+(function() {
+"use strict";
+
+
+document
+.querySelector("#contact-form-buttom")
+.addEventListener("click", submitMail);
+
+function submitMail() {
+    console.log("You clicked the submit button.");
+    let name = document.querySelector("#name").value;
+    let email = document.querySelector("#mail").value;
+    let message = document.querySelector("#msg").value;
+    console.log("Name: " + name);
+    console.log("Email: " + email);
+    console.log("Message: " + message);
+
+}
+
+}());
