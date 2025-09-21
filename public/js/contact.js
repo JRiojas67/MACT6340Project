@@ -6,9 +6,9 @@ import { value } from "p5";
 
 document
 .querySelector("#contact-form-buttom")
-.addEventListener("click", submitMail);
-
-function submitMail() {
+.addEventListener("click", (event)=> {
+    event.preventDefault();
+    event.stopPropagation();
     console.log("You clicked the submit button.");
     let name = document.querySelector("#name").value;
     let email = document.querySelector("#mail").value;
@@ -17,6 +17,6 @@ function submitMail() {
     console.log("Email: " + email);
     console.log("Message: " + message);
 
-}
+});
 
 }());
