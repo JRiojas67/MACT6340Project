@@ -3,49 +3,32 @@ import { value } from "p5";
 (function() {
 "use strict";
 
-
+let form = document.querySelector('#contact-form')
 document
 .querySelector("#contact-form-buttom")
 .addEventListener("click", (event)=> {
     event.preventDefault();
     event.stopPropagation();
-    console.log("You clicked the submit button.");
-    let name = document.querySelector("#name").value;
-    let email = document.querySelector("#mail").value;
-    let message = document.querySelector("#msg").value;
-    console.log("Name: " + name);
-    console.log("Email: " + email);
-    console.log("Message: " + message);
-
+    let formValid = true;
+    if (!form.checkValidity()) {
+        formValid = false;
+    }
+    form.classList.add('was-validated');
+    if (!formValid) {
+        senTheEmail();
+    }
 });
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
-
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
-
-
-
-
-
-
-
-
-
+function senTheEmail() {
+    console.log("You clicked the submit button.");
+    let firstName = document.querySelector("#first-name").value;
+    let lastName = document.querySelector("#last-name").value;
+    let email = document.querySelector("#mail").value;
+    let message = document.querySelector("#msg").value;
+    console.log("First name: " + firstName);
+    console.log("Last name: " + lastName);
+    console.log("Email: " + email);
+    console.log("Message: " + message);
+}
 
 }());
