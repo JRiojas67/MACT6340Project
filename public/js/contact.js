@@ -4,9 +4,7 @@ import { value } from "p5";
 "use strict";
 
 let form = document.querySelector('#contact-form')
-document
-.querySelector("#contact-form-buttom")
-.addEventListener("click", (event)=> {
+document.querySelector("#send-contact").addEventListener("click", (event)=> {
     event.preventDefault();
     event.stopPropagation();
     let formValid = true;
@@ -21,10 +19,10 @@ document
 
 function senTheEmail() {
     console.log("You clicked the submit button.");
-    let firstName = document.querySelector("#first-name").value;
-    let lastName = document.querySelector("#last-name").value;
-    let email = document.querySelector("#mail").value;
-    let message = document.querySelector("#msg").value;
+    let firstName = document.querySelector("#contact-first").value;
+    let lastName = document.querySelector("#contact-last").value;
+    let email = document.querySelector("#contact-email-addr").value;
+    let message = document.querySelector("#contact-question").value;
     console.log("First name: " + firstName);
     console.log("Last name: " + lastName);
     console.log("Email: " + email);

@@ -22,34 +22,51 @@
 
     <form id="contact-form" class="needs-validation">
   
-    <div class="row m-5">
-  <div class="col">
-    <input id="first-name" type="text" class="form-control" placeholder="First name" aria-label="First name" required>
+  
+  <div class="col m-3">
+    <label for="contact-last" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="contact-first"required>
+    <div class="invalid-feedback">
+    Please enter your first name.
   </div>
-  <div class="col">
-    <input id="last-name" type="text" class="form-control" placeholder="Last name" aria-label="Last name"required>
+  </div>
+  <div class="col m-3">
+    <label for="contact-last" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="contact-last"required>
+    <div class="invalid-feedback">
+    Please enter your last name.
   </div>
 </div>
-<div class="row m-5">
+</div>
+<div class="row m-1">
   <div class="mb-3">
-    
-    <input id="mail" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email address" aria-describedby="emailHelp" required>
+    <label for="contact-eamil-addr" class="form-label">Email address</label>
+    <input  type="email" class="form-control" id="contact-eamil-addr" aria-describedby=" contact-email-help" placeholder="name@example.com"required>
       <div id="emailFeedback" class="invalid-feedback">
         Format should be example@example.com.
       </div>
     <div id="emailHelp" class="form-text"></div>
   </div>
 </div>
-<div class="row m-5">
-  <div class="mb-3">
-  
-  <textarea class="form-control" id="msg" rows="3" placeholder="Questions or comments."></textarea>
+
+<div class="row m-1">
+  <div class="m-1">
+    <label for="contact-question" class="form-label"> Question or Comment</label>
+    <div class="input-group has-validation">
+  <textarea class="form-control" id="contact-question" rows="5" maxlength="1000" aria-describedby="contact-help" required></textarea>
+  <div id="contacct-question-help" class="invalid-feedback">
+    Please enter a question or comment.
+</div>
+</div>
 </div>
 </div>
 
-<div class="row m-10">
-</div>  <button id="contact-form-button" type="submit" class="btn btn-primary">Submit Request</button>
-</form>
+<div class="col m-3">
+</div> 
+ <button id="send-contact" name="sndContact" class="btn btn-primary" type="submit">Submit Request</button>
+</form></button>
+<span class="m-2" id="contact-button-response"></span>
+<span class="m-2" id="result"></span>
 </div>
 </body>
 </body>
