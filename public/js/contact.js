@@ -19,14 +19,14 @@ document.querySelector("#send-contact").addEventListener("click", (event)=> {
 
 function senTheEmail() {
     console.log("You clicked the submit button.");
-    let firstName = document.querySelector("#contact-first").value;
-    let lastName = document.querySelector("#contact-last").value;
-    let email = document.querySelector("#contact-email-addr").value;
-    let message = document.querySelector("#contact-question").value;
-    console.log("First name: " + firstName);
-    console.log("Last name: " + lastName);
-    console.log("Email: " + email);
-    console.log("Message: " + message);
+    let obj = {
+        subject:"Someone submitted the contact form!",
+        text:`${document.querySelector("#contact-first").value}
+         ${document.querySelector("#contact-last").value} 
+         sent you a message that reads ${document.querySelector("#contact-question").value}. 
+         They're email address is ${document.querySelector("#contact-email-addr").value}`,
+    };
+  
 }
 
-}());
+})();
