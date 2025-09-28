@@ -15,7 +15,7 @@ app.use(express.static('public'));
 app.post("/mail", async (req, res) => {
   await utils
   .sendMessage(req.body.subject, req.body.text)
-    .then(() => {
+  .then(() => {
       res.send({ result: "success"});
     }) 
     .catch((error) => {
