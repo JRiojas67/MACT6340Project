@@ -21,12 +21,12 @@ export async function sendMessage(subject, text) {
    };
 
    await transporter
-   .sendMail(message);
-    then(() => {
-    console.log("Message sent");
+   .sendMail(message)
+   .then(() => {
+      console.log("Message sent");
    })
 
     .catch((error) => {
-    console.log("Message not sent - " + error);
+      console.log("Message not sent - " + error);
     });
 }
