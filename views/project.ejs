@@ -14,7 +14,14 @@
         
     </head>
     <body>
-        <div>Project</div>
-        <script type="module" src="./js/index.js"></script>
+         <%- include('header'); %>
+    <div class="container">
+     <div class="spacer"></div>
+        <div>Project Page for <%=which> </div>
+    </div>
+    <div class="container-fluid">
+        <%- include('footer'); %>
+    </div>
+    <script type="module" src="./js/index.js"></script>
     </body>
 </html>
