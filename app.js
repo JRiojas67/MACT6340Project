@@ -35,14 +35,12 @@ app.get('/contact', (req, res) => {
 });
 
 app.post("/mail", async (req, res) => {
-  await utils
-  .sendMessage(req.body.subject, req.body.text)
-  .then(() => {
-      res.send({ result: "success"});
-    }) 
-    .catch((error) => {
-      res.send({ result: "failure"});
-    });
+});
+
+app.use((error, req, res, next) => {
+  console.error(error);
+  res.render("error.ejs");
+  
 });
 
 app.listen(port, () => {
