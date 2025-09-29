@@ -28,16 +28,16 @@
     <div class="container">
      <div class="spacer"></div>
      <div>Projects</div>
-
- 
-
-        </div>
-        </header>
-        </section>
-       
-
-        <section>
+    <% projectArray.forEach((item, index) => { %>
+      <div>
+    <div>
+    <a href='/project/<%= index + 1%>'><%= item %></a>
+    </div>
+    <% }); %>
+    </div>
+    <div class="container-fluid">
   <%- include('footer'); %>
+  </div>
 </section>
 
         <script type="module" src="./js/index.js"></script>
