@@ -22,7 +22,6 @@
 
 
     <body>
-          <header>
         <section>
      <%- include('header'); %>
     <div class="container">
@@ -31,8 +30,7 @@
      <h2 class="text-white">Projects</h2>
     <% projectArray.forEach((item, index) => { %>
       <div>
-    <div>
-    <a href='/project/<%= index + 1%>'><%= item %></a>
+    <%- include ('projectCard', {ident: item.id, image: item.img_url, name: item.project_name}; %>
     </div>
     <% }); %>
     </div>

@@ -19,22 +19,22 @@ app.get('/', async (req, res) => {
       //query the database for project records
       projects = await db.getAllProjects();
       console.log(projects);
-      res.render('index.ejs', { projectArray: data });
+      res.render("index.ejs");
     })
     .catch(next);
 });
 
-app.get('/projects',  (req, res) => {
-  res.render('projects.ejs', {data: projects});
+app.get("/projects", (req, res) => {
+  res.render("projects.ejs", {projectArray: projects});
 });
 
 app.get("/project/:id", (req, res) => {
-  let projectId = req.params.id;
-  if ( id > data.length) {
-  throw new Error("No project with that ID");
-}
+  let id = req.params.id;
+  if (id > data.length) {
+    throw new Error("No project with that ID");
+  }
   res.render("project.ejs", { projectArray: data, which: id });
-  });
+});
   
 app.get('/newProject', (req, res) => {
   res.render('newProject.ejs');
