@@ -26,15 +26,28 @@
      <%- include('header'); %>
     <div class="container">
      <div class="spacer"></div>
+     <h1 class="text-white">Projects</h1>
      <div></div>
-     <h2 class="text-white">Projects</h2>
-    <% projectArray.forEach((item, index) => { %>
+     <div class="mb-5">
+      <div class="row"></div>
+      <div class="row row cols-1 row-cols-md-2 row-cols-lg-3 g-3 text-center justify-content-center"></div>
+    
+    <img src="images/CyberGod.PNG" alt="Cyber God NFT Image" class="img-fluid mx-auto d-block"/>
+          <div class="spacer"></div>
+            <div class="container"></div>
+    </div>
+    <img src="images/Neon_Under_Belly.PNG" alt="Neon_Under_Belly NFT Image" class="img-fluid mx-auto d-block"/>
+          <div class="spacer"></div>
+            <div class="container"></div>
+    <img src="images/Aztec_Beast.PNG" alt="Aztec_God NFT Image" class="img-fluid mx-auto d-block"/>
+          <div class="spacer"></div>
+            <div class="container"></div>
+    <div class="container-fluid">
+      <% projectArray.forEach((item, index) => { %>
       <div>
-    <%- include ('projectCard', {ident: item.id, image: item.img_url, name: item.project_name}; %>
+    <%- include ('projectCard', {ident: item.id, image: item.img_url, name: item.project_name}); %>
     </div>
     <% }); %>
-    </div>
-    <div class="container-fluid">
   <%- include('footer'); %>
   </div>
 </section>
