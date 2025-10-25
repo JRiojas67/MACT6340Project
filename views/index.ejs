@@ -58,37 +58,19 @@
 <div class="spacer"></div>
   <div class="container px-1 py-1" id="hanging-icons">
     <h2 class="text-white">Featured Projects</h2>
-    <div class="row g-4 py-3 row-cols-3  row-cols-lg-3">
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-1 flex-shrink-3 me-5">
-          <svg class="bi" width="0em" height="0em"><use xlink:href="#toggles2"/></svg>
-        </div>
-        <div>
-          
-          <h3 class="text-white flex-shrink-1 fs-5">Crimson Guardian</h3>
-          <img src="images/Crimson_Guardian.PNG" alt="Crimson Guardian class=" mb-5> <width="50" height="50">
-              </li>
-              <div class="spacer"></div>
-            <div class="container"></div>
-          <p class="text-white flex-shrink-1 fs-5">An imposing figure clad in ornate crimson armor adorned with intricate technological details and glowing cyan accents. This warrior stands as a sentinel in the neon-drenched streets, embodying the perfect fusion of ceremonial tradition and cutting-edge cybernetic enhancement</a>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6 d-flex flex-column align-items-center text-center">
+        <div class="mb-3">
+          <h3 class="text-white mb-4">Crimson Guardian</h3>
+          <img src="images/Crimson_Guardian.PNG" alt="Crimson Guardian" class="img-fluid rounded shadow mb-4" style="max-width: 500px;">
+          <p class="text-white fs-5">An imposing figure clad in ornate crimson armor adorned with intricate technological details and glowing cyan accents. This warrior stands as a sentinel in the neon-drenched streets, embodying the perfect fusion of ceremonial tradition and cutting-edge cybernetic enhancement.</p>
         </div>
       </div>
-      
-      
-      </div>
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-bg-light d-inline-flex align-items-right justify-content-right fs-10 flex-shrink-0 me-3">
-          <svg class="bi" width="0em" height="0em"><use xlink:href="#tools"/></svg>
-        </div>
-        <div>
-      </div>
-    <div>
- </div>
       
  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
   <ul class="nav nav-pills">
-    <li class="nav-item"><a href="/projects" class="btn btn-outline-primary me-2 "page" >View All Projects</a></li>
-    <li class="nav-item"><a href="/newProject" class="btn btn-outline-primary me-2 "page" >Features</a></li>
+    <li class="nav-item"><a href="/projects" class="btn btn-outline-primary me-2">View All Projects</a></li>
+    <li class="nav-item"><a href="/newProject" class="btn btn-outline-primary me-2">Features</a></li>
     </ul>
   </div>
 </maim>
@@ -98,19 +80,17 @@
 <div id="about" class="area">
 <div class="spacer"></div>
 <div class="row justify-content-center">
-<div class="col-10 text-center justify-content-center">
-<p></p>
-    <h3 class="text-white fs-1 mb-4">About the Artist</h3>
- <div class="container col-xxl-8 px-4 py-3">
+<div class="col-12 col-lg-10 text-center">
+    <h3 class="text-white display-4 mb-4">About the Artist</h3>
+ <div class="container">
     <div class="row flex-lg-row-reverse align-items-center g-4 py-3">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="images/me.JPG" class="d-block mx-lg-auto img-fluid mb-3" alt="Profile Image" width="300" height="300" loading="lazy">
+      <div class="col-12 col-sm-8 col-lg-6 text-center">
+        <img src="images/me.JPG" class="d-block mx-auto img-fluid mb-3 rounded shadow" alt="Profile Image" style="max-width: 300px;" loading="lazy">
       </div>
-      <div class="col-lg-6">
+      <div class="col-12 col-lg-6 text-center text-lg-start">
         <h2 class="text-white mb-3">Javier Riojas</h2>
-        <p class="text-white fs-5 mb-0">A passionate digital artist specializing in cyberpunk and futuristic artwork. My creations blend neon aesthetics with cutting-edge design to bring imaginary worlds to life.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        </div>
+        <p class="text-white fs-5 mb-3">A passionate digital artist specializing in cyberpunk and futuristic artwork. My creations blend neon aesthetics with cutting-edge design to bring imaginary worlds to life.</p>
+        <a href="/contact" class="btn btn-outline-primary">Contact Me</a>
       </div>
     </div>
 
@@ -120,6 +100,7 @@
   <%- include('footer'); %>
 </section>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script type="module" src="/js/index.js"></script>
     </body>
 
 </html>
