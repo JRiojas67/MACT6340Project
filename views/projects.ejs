@@ -24,24 +24,21 @@
     <body>
         <section>
      <%- include('header'); %>
-    <div class="container">
-     <div class="spacer"></div>
-     <h1 class="text-white">Projects</h1>
-     <div></div>
-     <div class="mb-5">
-      <div class="row"></div>
-      <div class="row row cols-1 row-cols-md-2 row-cols-lg-3 g-3 text-center justify-content-center"></div>
-    
-    <img src="images/CyberGod.PNG" alt="Cyber God NFT Image" class="img-fluid mx-auto d-block"/>
-          <div class="spacer"></div>
-            <div class="container"></div>
-    </div>
-    <img src="images/Neon_Under_Belly.PNG" alt="Neon_Under_Belly NFT Image" class="img-fluid mx-auto d-block"/>
-          <div class="spacer"></div>
-            <div class="container"></div>
-    <img src="images/Aztec_Beast.PNG" alt="Aztec_God NFT Image" class="img-fluid mx-auto d-block"/>
-          <div class="spacer"></div>
-            <div class="container"></div>
+    <div class="container py-5">
+     <h1 class="text-white text-center mb-5">Projects</h1>
+     
+     <!-- Featured Images Grid -->
+     <div class="row g-4 mb-5">
+       <div class="col-md-4 text-center">
+         <img src="images/CyberGod.PNG" alt="Cyber God NFT Image" class="img-fluid rounded shadow" style="max-width: 375px;">
+       </div>
+       <div class="col-md-4 text-center">
+         <img src="images/Neon_Under_Belly.PNG" alt="Neon Under Belly NFT Image" class="img-fluid rounded shadow" style="max-width: 375px;">
+       </div>
+       <div class="col-md-4 text-center">
+         <img src="images/Aztec_Beast.PNG" alt="Aztec Beast NFT Image" class="img-fluid rounded shadow" style="max-width: 375px;">
+       </div>
+     </div>
     <div class="container-fluid">
       <% projectArray.forEach((item, index) => { %>
       <div>
