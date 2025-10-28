@@ -4,11 +4,13 @@ import * as utils from "./utils/utils.js";
 import nodemailer from "nodemailer";
 dotenv.config();
 import * as db from './utils/database.js';
+import cors from 'cors';
 
 let projects = [];
 
 
 const app = express();
+app.use(cors());
 const port = 3000;
 app.set("view engine", "ejs");
 app.use(express.json());
