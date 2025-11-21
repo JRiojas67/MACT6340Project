@@ -16,29 +16,27 @@ app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.static('public'));
 
-app.get('/', async (req, res,next) => {
-  await db
+app.get('/', async (req, res, next) => {
+    await db
     .connect()
-    .then(async() => {
-      //query the database for project records
-      projects = await db.getAllProjects();
-      console.log(projects);
-      let featuredRand = Math.floor(Math.random() * projects.length);
-      res.render("index.ejs", { featuredProject: projects[featuredRand] });
-    })
-    .catch(next);
+    .then(async () => {
+     console.log(projects);
+     let featuredRand = Math.floor(Math.random() * projects.length);
+     res.render("index.ejs", { featuredProject: projects[featuredRand] });
+   } )
+   .catch (next);
 });
 
-app.get("/projects", (req, res) => {
-  res.render("projects.ejs", {projectArray: projects});
-});
+app.get("/projects", (req, res, next) => {
+      res.render("projects.ejs", {projectArray: projects});
+    });
 
 app.get("/project/:id", (req, res) => {
   let id = req.params.id;
-  if (id > data.length) {
+  if (id >= projects.length) {
     throw new Error("No project with that ID");
   }
-  res.render("project.ejs", { projectArray: data, which: id });
+  res.render("project.ejs", { projectArray: projects, which: id });
 });
   
 app.get('/newProject', (req, res) => {

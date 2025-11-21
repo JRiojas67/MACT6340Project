@@ -14,8 +14,7 @@ export async function connect() {
     process.env.MYSQL_HOST +
     "/" + 
     process.env.MYSQL_DATABASE;
-    pool = mysql
-    .createPool(
+    pool = mysql.createPool(
         cString //digital ocean sql server
         // {
         // host: process.env.MYSQL_HOST,
