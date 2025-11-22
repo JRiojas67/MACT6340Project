@@ -59,6 +59,18 @@ app.get('/neonUnderBelly', (req, res) => {
   res.render('neonUnderBelly.ejs');
 });
 
+app.get('/holyGrail', (req, res) => {
+  res.render('holyGrail.ejs');
+});
+
+app.get('/spirits', (req, res) => {
+  res.render('spirits.ejs');
+});
+
+app.get('/tribalHealer', (req, res) => {
+  res.render('tribalHealer.ejs');
+});
+
 // Create email transporter
 const createTransporter = () => {
   return nodemailer.createTransporter({
