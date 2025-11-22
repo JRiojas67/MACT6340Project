@@ -47,6 +47,18 @@ app.get('/contact', (req, res) => {
   res.render('contact.ejs');
 });
 
+app.get('/cyberGod', (req, res) => {
+  res.render('cyberGod.ejs');
+});
+
+app.get('/aztecBeast', (req, res) => {
+  res.render('aztecBeast.ejs');
+});
+
+app.get('/neonUnderBelly', (req, res) => {
+  res.render('neonUnderBelly.ejs');
+});
+
 // Create email transporter
 const createTransporter = () => {
   return nodemailer.createTransporter({

@@ -6,9 +6,9 @@
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/xicon" href="./images/AbitofColor67.jpg">
-        <title>My NFT Mint Projects Page</title>
+        <title>My NFT Mint Featured Projects</title>
         <meta name="author" content="Javier Riojas">
-        <meta name="description" content="The projects page of my personal NFT mint for my collection of artwork.">
+        <meta name="description" content="The featured projects of my personal NFT mint for my collection of artwork.">
 
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,44 +19,40 @@
         <link rel="stylesheet" href="/css/style.css">
         
     </head>
-
-
     <body>
-        <section>
-     <%- include('header'); %>
-    <div class="container py-5">
-     <h1 class="text-white text-center mb-5">Projects</h1>
-     
-     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <header>
+            <section>
+        <container>
+            <div class="container">
+         <%- include('header'); %>
+         <h1 class="text-white fs-1 mb-4">Cyber God</h1>
+         
+            </div>
+          </header>
+
+        <section class="py-5">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-6 text-center mb-5">
+                <h3 class="text-white mb-4"></h3>
+                <img src="images/CyberGod.PNG" alt="Cyber God" class="img-fluid mb-4" style="max-width: 500px;">
+                <p class="text-white fs-5">A majestic God stands atop a sunlit platform, its armor glowing with the warmth of the sun. This piece captures the essence of a hero in a cyberpunk world, where the sun's light symbolizes hope and strength in a neon-drenched environment.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+       
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
   <ul class="nav nav-pills">
     <li class="nav-item"><a href="/newProject" class="btn btn-outline-primary me-2">View All Featured Projects</a></li>
     <li class="nav-item"><a href="/projects" class="btn btn-outline-primary me-2">View All Projects</a></li>
     </ul>
   </div>
-
-    <div class="container-fluid">
-      <% projectArray.forEach((item, index) => { %>
-      <div>
-    <%- include ('projectCard', {ident: item.id, image: item.img_url, name: item.project_name}); %>
-    </div>
-    <% }); %>
+        
+         <div class="container-fluid"></div>
   <%- include('footer'); %>
-  </div>
 </section>
-
+  
         <script type="module" src="./js/index.js"></script>
     </body>
 </html>
-
-
-
-
-
-
-
-
-<div class="row g-4 mb-5">
-       <div class="col-md-4 text-center">
-         <img src="images/CyberGod.PNG" alt="Cyber God NFT Image" class="img-fluid rounded shadow mb-3" style="max-width: 375px;">
-         <a href="/project/cybergod" class="btn btn-outline-primary">Cyber God</a>
-       </div>
