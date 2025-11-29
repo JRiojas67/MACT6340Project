@@ -17,19 +17,19 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.get('/', async (req, res, next) => {
-    await db
+  await db
     .connect()
     .then(async () => {
-     console.log(projects);
-     let featuredRand = Math.floor(Math.random() * projects.length);
-     res.render("index.ejs", { featuredProject: projects[featuredRand] });
+      console.log(projects);
+      let featuredRand = Math.floor(Math.random() * projects.length);
+      res.render("index.ejs", { featuredProject: projects[featuredRand] });
    } )
    .catch (next);
 });
 
 app.get("/projects", (req, res, next) => {
-      res.render("projects.ejs", {projectArray: projects});
-    });
+  res.render("projects.ejs", {projectArray: projects});
+});
 
 app.get("/project/:id", (req, res) => {
   let id = req.params.id;

@@ -6,9 +6,9 @@
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/xicon" href="./images/AbitofColor67.jpg">
-        <title>My NFT Mint Projects Page</title>
+        <title>My Portfolio Projects Page</title>
         <meta name="author" content="Javier Riojas">
-        <meta name="description" content="The projects page of my personal NFT mint for my collection of artwork.">
+        <meta name="description" content="The projects page of my professional portfolio for my collection of artwork.">
 
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,8 +40,6 @@
        <div class="col-md-4 text-center">
          <img src="images/Aztec_Beast.PNG" alt="Aztec Beast NFT Image" class="img-fluid rounded shadow mb-3" style="max-width: 375px;">
          <a href="/aztecBeast" class="btn btn-outline-primary">Aztec Beast</a>
-        </div>
-        
        </div>
      </div>
 
@@ -67,11 +65,16 @@
     </ul>
   </div>
 
+
+
+
+  
     <div class="container-fluid">
       <% projectArray.forEach((item, index) => { %>
       <div>
     <%- include ('projectCard', {ident: item.id, image: item.img_url, name: item.project_name}); %>
     </div>
+    
     <% }); %>
   <%- include('footer'); %>
   </div>
