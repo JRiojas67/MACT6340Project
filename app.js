@@ -71,6 +71,30 @@ app.get('/tribalHealer', (req, res) => {
   res.render('tribalHealer.ejs');
 });
 
+app.get('/abstractArt', (req, res) => {
+  res.render('abstractArt.ejs');
+});
+
+app.get('/3dArt', (req, res) => {
+  res.render('3dArt.ejs');
+});
+
+app.get('/pastArt', (req, res) => {
+  res.render('pastArt.ejs');
+});
+
+app.get('/cyberpunkAztec', (req, res) => {
+  res.render('cyberpunkAztec.ejs');
+});
+
+app.get('/crimsonGuardian', (req, res) => {
+  res.render('crimsonGuardian.ejs');
+});
+
+app.get('/eternalPlaceOfWorship', (req, res) => {
+  res.render('eternalPlaceOfWorship.ejs');
+});
+
 // Create email transporter
 const createTransporter = () => {
   return nodemailer.createTransporter({

@@ -14,7 +14,19 @@
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="/" class="nav-link text-white me-3" aria-current="page" style="transition: all 0.3s ease; border-radius: 5px; padding: 8px 12px;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'" onmouseout="this.style.backgroundColor='transparent'" onclick="this.style.backgroundColor='rgba(255,255,255,0.2)'">Home</a></li>
         <li class="nav-item"><a href="/newProject" class="nav-link text-white me-3" style="transition: all 0.3s ease; border-radius: 5px; padding: 8px 12px;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'" onmouseout="this.style.backgroundColor='transparent'" onclick="this.style.backgroundColor='rgba(255,255,255,0.2)'">Featured</a></li>
-        <li class="nav-item"><a href="/projects" class="nav-link text-white me-3" style="transition: all 0.3s ease; border-radius: 5px; padding: 8px 12px;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'" onmouseout="this.style.backgroundColor='transparent'" onclick="this.style.backgroundColor='rgba(255,255,255,0.2)'">Projects</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white me-3" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="transition: all 0.3s ease; border-radius: 5px; padding: 8px 12px;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'" onmouseout="this.style.backgroundColor='transparent'">
+            Projects
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="projectsDropdown">
+            <li><a class="dropdown-item" href="/projects">All Projects</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/abstractArt">Abstract Art</a></li>
+            <li><a class="dropdown-item" href="/3dArt">3D Art</a></li>
+            <li><a class="dropdown-item" href="/cyberpunkAztec">Cyberpunk Aztec</a></li>
+            <li><a class="dropdown-item" href="/pastArt">Past Art</a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a href="/#about" class="nav-link text-white me-3" style="transition: all 0.3s ease; border-radius: 5px; padding: 8px 12px;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'" onmouseout="this.style.backgroundColor='transparent'" onclick="this.style.backgroundColor='rgba(255,255,255,0.2)'">Artist</a></li>
         <li class="nav-item"><a href="/contact" class="nav-link text-white me-3" style="transition: all 0.3s ease; border-radius: 5px; padding: 8px 12px;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'" onmouseout="this.style.backgroundColor='transparent'" onclick="this.style.backgroundColor='rgba(255,255,255,0.2)'">Contact</a></li>
         </li>
