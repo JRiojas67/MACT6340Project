@@ -79,8 +79,8 @@ app.get('/3dArt', (req, res) => {
   res.render('3dArt.ejs');
 });
 
-app.get('/pastArt', (req, res) => {
-  res.render('pastArt.ejs');
+app.get('/archiveArt', (req, res) => {
+  res.render('archiveArt.ejs');
 });
 
 app.get('/cyberpunkAztec', (req, res) => {

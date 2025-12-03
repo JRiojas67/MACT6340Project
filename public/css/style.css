@@ -50,3 +50,57 @@ background-position:center;
 background-size: cover;
 background-attachment: fixed;
  }
+
+/* Carousel Styling */
+#artworkCarousel {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  min-height: 600px;
+}
+
+.carousel-item {
+  min-height: 550px;
+}
+
+.carousel-indicators button {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+}
+
+.carousel-indicators button.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  width: 30px;
+  height: 30px;
+}
+
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-property: opacity;
+  transform: none;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+}
