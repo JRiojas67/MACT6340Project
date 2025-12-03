@@ -95,6 +95,66 @@ app.get('/eternalPlaceOfWorship', (req, res) => {
   res.render('eternalPlaceOfWorship.ejs');
 });
 
+app.get('/cells', (req, res) => {
+  res.render('cells.ejs');
+});
+
+app.get('/vibration', (req, res) => {
+  res.render('vibration.ejs');
+});
+
+app.get('/worldsCollide', (req, res) => {
+  res.render('worldsCollide.ejs');
+});
+
+app.get('/thePinkBehindTheMask', (req, res) => {
+  res.render('thePinkBehindTheMask.ejs');
+});
+
+app.get('/sublime', (req, res) => {
+  res.render('sublime.ejs');
+});
+
+app.get('/smokeAndMirrors', (req, res) => {
+  res.render('smokeAndMirrors.ejs');
+});
+
+app.get('/aztecNight', (req, res) => {
+  res.render('aztecNight.ejs');
+});
+
+app.get('/birdOfPrey', (req, res) => {
+  res.render('birdOfPrey.ejs');
+});
+
+app.get('/aztecSunrise', (req, res) => {
+  res.render('aztecSunrise.ejs');
+});
+
+app.get('/raven', (req, res) => {
+  res.render('raven.ejs');
+});
+
+app.get('/societiesET', (req, res) => {
+  res.render('societiesET.ejs');
+});
+
+app.get('/success', (req, res) => {
+  res.render('success.ejs');
+});
+
+app.get('/theWall', (req, res) => {
+  res.render('theWall.ejs');
+});
+
+app.get('/throughTheSunsRays', (req, res) => {
+  res.render('throughTheSunsRays.ejs');
+});
+
+app.get('/throughTheBrush', (req, res) => {
+  res.render('throughTheBrush.ejs');
+});
+
 // Create email transporter
 const createTransporter = () => {
   return nodemailer.createTransporter({

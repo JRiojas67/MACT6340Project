@@ -60,7 +60,7 @@
     <h2 class="text-white mb-4">Art of the Week</h2>
     <div class="row justify-content-center">
       <div class="col-12 col-md-10 col-lg-8">
-        <div id="artworkCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        <div id="artworkCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="8000">
           <div class="carousel-indicators" id="carouselIndicators">
             <!-- Indicators will be dynamically generated -->
           </div>
@@ -171,6 +171,48 @@
         alt: "Eternal Place of Worship",
         description: "A majestic cyberpunk pyramid rises from a sprawling metropolis, its ancient form transformed by pulsing neon lights and futuristic architecture. This piece explores the intersection of historical monuments and technological evolution.",
         link: "/eternalPlaceOfWorship"
+      },
+      {
+        name: "Cells",
+        image: "images/Cells.JPG",
+        alt: "Cells",
+        description: "An abstract exploration of cellular structures, showcasing the intricate beauty of biological forms through vibrant colors and geometric patterns.",
+        link: "/cells"
+      },
+      {
+        name: "Vibration",
+        image: "images/Vibration.JPG",
+        alt: "Vibration",
+        description: "A dynamic composition capturing the essence of movement and energy through rhythmic patterns and pulsating colors that seem to vibrate across the canvas.",
+        link: "/vibration"
+      },
+      {
+        name: "Worlds Collide",
+        image: "images/WorldsCollide.jpg",
+        alt: "Worlds Collide",
+        description: "A powerful fusion of contrasting realms, where different dimensions and realities merge in a spectacular collision of form, color, and meaning.",
+        link: "/worldsCollide"
+      },
+      {
+        name: "The Pink Behind the Mask",
+        image: "images/thePink%20behind%20the%20mask.JPG",
+        alt: "The Pink Behind the Mask",
+        description: "An introspective piece revealing the hidden layers beneath the surface, where vibrant pink hues emerge from behind a mask, symbolizing the authentic self that lies beneath appearances.",
+        link: "/thePinkBehindTheMask"
+      },
+      {
+        name: "Sublime",
+        image: "images/Sublime.JPG",
+        alt: "Sublime",
+        description: "A transcendent composition that captures the essence of beauty and perfection, evoking a sense of awe and wonder through harmonious color relationships and flowing forms.",
+        link: "/sublime"
+      },
+      {
+        name: "Smoke and Mirrors",
+        image: "images/SmokeandMirrors.jpg",
+        alt: "Smoke and Mirrors",
+        description: "An enigmatic piece exploring themes of illusion and reality, where smoke-like forms blend with reflective surfaces to create a mesmerizing dance of deception and truth.",
+        link: "/smokeAndMirrors"
       }
     ];
 
@@ -214,10 +256,20 @@
       });
     }
     
+    // Fisher-Yates shuffle algorithm for true randomization
+    function shuffleArray(array) {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+    
     // Load carousel when page loads
     document.addEventListener('DOMContentLoaded', function() {
-      // Shuffle artwork array for random order
-      const shuffledArtwork = [...allArtwork].sort(() => 0.5 - Math.random());
+      // Shuffle artwork array for random order on each page load
+      const shuffledArtwork = shuffleArray(allArtwork);
       createCarousel(shuffledArtwork);
     });
   </script>
